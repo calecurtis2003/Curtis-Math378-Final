@@ -11,7 +11,7 @@
     "href": "about.html",
     "title": "About",
     "section": "",
-    "text": "About this site\n\n1 + 1\n\n[1] 2"
+    "text": "About this site\n\n# Cale Curtis's Final Project for Math 378 (Hell Stats)."
   },
   {
     "objectID": "eda.html",
@@ -25,6 +25,6 @@
     "href": "index.html",
     "title": "Math 378 Final",
     "section": "",
-    "text": "This is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites.\n\n1 + 1\n\n[1] 2"
+    "text": "This is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites.\n\n# My greatest accomplishment yet"
   }
 ]
