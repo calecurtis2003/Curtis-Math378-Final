@@ -16,6 +16,7 @@ from pandas import get_dummies
 import numpy as np
 from sklearn.linear_model import LinearRegression
 from sklearn import preprocessing
+## Model.qmd
 # Chapter 1
 ## Get Data
 

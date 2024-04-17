@@ -1,1 +1,0 @@
-{"height":406.0568603213844,"width":657.0,"size_behavior":0,"conditions":[[0,"\u001B[1m\u001B[22m`geom_smooth()` using formula = 'y ~ x'"],[1,"Warning: \u001B[1m\u001B[22mRemoved 2 rows containing non-finite outside the scale range (`stat_smooth()`)."],[1,"Warning: \u001B[1m\u001B[22mRemoved 2 rows containing missing values or values outside the scale range (`geom_point()`)."]]}

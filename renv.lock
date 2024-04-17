@@ -580,6 +580,13 @@
       ],
       "Hash": "b8552d117e1b808b09a832f589b79035"
     },
+    "log4r": {
+      "Package": "log4r",
+      "Version": "0.4.3",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "2e3b3470a4f186d4ae1d71cc374446d9"
+    },
     "magrittr": {
       "Package": "magrittr",
       "Version": "2.0.3",
