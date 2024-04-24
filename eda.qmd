@@ -1,11 +1,8 @@
 ---
 title: "Penguins EDA"
-
 format:
-
-html: 
-
-code-fold: true
+  html: 
+    code-fold: true
 ---
 
 ```{r}
