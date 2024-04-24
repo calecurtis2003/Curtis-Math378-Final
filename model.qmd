@@ -19,6 +19,11 @@ df = penguins.load_penguins().dropna()
 
 df.head(3)
 
+```
+
+```{python}
+import warnings
+warnings.filterwarnings('ignore')
 
 ## Define Model and Fit
 

@@ -5,7 +5,7 @@ format:
     code-fold: true
 ---
 
-```{r}
+```{r warning=FALSE, message=FALSE}
 ## Eda.qmd
 ## Penguin Size and Mass by Sex and Species
 library(DBI)
