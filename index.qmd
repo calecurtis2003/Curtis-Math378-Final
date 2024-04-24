@@ -5,5 +5,5 @@ title: "Math 378 Final"
 ```{r}
 # My greatest accomplishment yet. 
 
-knitr::include_graphics("./chinstrap.jpg")
+knitr::include_graphics("./Chinstrap.jpg")
 ```

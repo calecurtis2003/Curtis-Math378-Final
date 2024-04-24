@@ -1,11 +1,8 @@
 ---
 title: "Model"
-
 format:
-
-html:
-
-code-fold: true
+  html:
+    code-fold: true
 ---
 
 ```{python}
