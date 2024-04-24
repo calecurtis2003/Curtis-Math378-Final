@@ -1,9 +1,9 @@
-"0","reticulate::repl_python()"
 "0","from palmerpenguins import penguins"
 "0","from pandas import get_dummies"
 "0","import numpy as np"
 "0","from sklearn.linear_model import LinearRegression"
 "0","from sklearn import preprocessing"
+"0","## Model.qmd"
 "0","# Chapter 1"
 "0","## Get Data"
 "0",""
@@ -17,6 +17,7 @@
 
 [3 rows x 8 columns]
 "
+"0","## Define Model and Fit"
 "0",""
 "0","X = get_dummies(df[['bill_length_mm', 'species', 'sex']], drop_first = True)"
 "0","y = df['body_mass_g']"
@@ -31,7 +32,6 @@
 "0","print(f""Intercept {model.intercept_}"")"
 "1","Intercept 2169.269720939398
 "
-"0","print(f""Columns {X.columns}"")"
 "1","Columns Index(['bill_length_mm', 'species_Chinstrap', 'species_Gentoo', 'sex_male'], dtype='object')
 "
 "0","print(f""Coefficients {model.coef_}"")"
@@ -55,7 +55,7 @@
 "
 "2","Writing pin:
 Name: 'penguin_model'
-Version: 20240415T175714Z-a6f9b"
+Version: 20240423T205914Z-a6f9b"
 "2","
 "
 "0","v = VetiverModel.from_pin(b, 'penguin_model')"
