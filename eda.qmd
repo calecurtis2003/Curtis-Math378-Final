@@ -1,12 +1,10 @@
-\-\--
-
+---
 title: "Penguins EDA"
 
 format:
 
 html: code-fold: true
-
-\-\--
+---
 
 ```{r}
 ## Eda.qmd
@@ -32,8 +30,6 @@ df %>%
   knitr::kable()
 
 ## Penguin Size vs Mass by Species
-
-
 df %>%
   ggplot(aes(x = bill_length_mm, y = body_mass_g, color = species)) +
   geom_point() + 

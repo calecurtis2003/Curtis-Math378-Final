@@ -2,10 +2,8 @@
 title: "Math 378 Final"
 ---
 
-This is a Quarto website.
-
-To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
-
 ```{r}
-# My greatest accomplishment yet
+# My greatest accomplishment yet. 
+
+knitr::include_graphics("./chinstrap.jpg")
 ```

@@ -10,6 +10,7 @@ website:
       - about.qmd
       - eda.qmd 
       - model.qmd
+      - classification.qmd
 
 format:
   html: 

@@ -6,4 +6,6 @@ About this site
 
 ```{r}
 # Cale Curtis's Final Project for Math 378 (Hell Stats). 
+
+# Documentation: None of this would have been possible without EI from Dr. Hauschild. Also, myself and Ethan Stroup worked hand in hand on this project including the tree classification models and uploading images to get that A. 
 ```

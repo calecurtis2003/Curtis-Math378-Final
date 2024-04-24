@@ -1,0 +1,123 @@
+---
+title: "Penguins Tree Models"
+
+format:
+
+  html:
+
+    code-fold: true
+---
+
+\## Initialize Penguin Data
+
+\### Load Necessary Packages
+
+```{r message=FALSE, warning=FALSE}
+library(palmerpenguins)
+
+library(dplyr)
+
+library(ggplot2)
+
+library(tidymodels)
+
+library(randomForest)
+
+library(rpart.plot)
+
+tidymodels_prefer()
+
+penguin_data <- palmerpenguins::penguins
+
+df <- na.omit(penguin_data)
+```
+
+\### Split Data
+
+```{r}
+set.seed(2025)
+
+penguins_split <- initial_split(df,prop = 0.8, strata = species)
+
+penguins_train <- training(penguins_split)
+
+penguins_test <- testing(penguins_split)
+```
+
+\## Simple Classification Tree
+
+\### Create Simple Tree and Fit
+
+```{r}
+class_tree_spec <- decision_tree() %>%      
+
+  set_engine("rpart") %>%      
+
+  set_mode("classification")
+
+class_tree_fit <- class_tree_spec %>% 
+
+  fit(species~., data = penguins_train)
+```
+
+\### Plot Fitted Tree
+
+```{r}
+#| warning: false 
+
+class_tree_fit %>%
+
+  extract_fit_engine() %>%
+
+  rpart.plot()
+```
+
+\### Get Accuracy of Tree
+
+```{r}
+augment(class_tree_fit, new_data = penguins_test) %>%      
+
+  accuracy(truth = species, estimate = .pred_class)
+```
+
+\## Bagging Approach
+
+\### Create Bagging Model and Fit
+
+```{r}
+bagging_spec <- rand_forest(mtry = .cols()) %>%      
+
+  set_engine("randomForest", importance = TRUE) %>%      
+
+  set_mode("classification")
+
+bagging_fit <- bagging_spec %>%    
+
+  fit(species ~ ., data = penguins_train)
+```
+
+Note the default number of trees is 500
+
+\### Show Important Predictors
+
+Since Bagging uses an ensemble of trees (in this case 500), we are unable to plot them
+
+```{r}
+library(vip)
+
+bagging_fit %>%       
+
+  extract_fit_engine() %>%       
+
+  vip()
+```
+
+\### Get Accuracy of Tree
+
+```{r}
+augment(bagging_fit, new_data = penguins_test) %>%      
+
+  accuracy(truth = species, estimate = .pred_class)
+```
+
+Seems as if the species in penguin data is easy to predict
